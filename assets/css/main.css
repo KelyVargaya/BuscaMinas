@@ -12,11 +12,11 @@
 }
 
 .tablero{
-	width: 50%;
+	width: 60%;
 	height: 50vh;								
-	margin-left: 3%;
+	margin-left: 33%;
 	margin-top: 5%;				
-			}
+}
 
 .tablero div{
 	width: 10%;
