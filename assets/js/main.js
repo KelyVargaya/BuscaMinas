@@ -54,10 +54,10 @@ function mostrarNumero(e){
 
 		if(minas[parseInt(auxstr[0],10)][parseInt(auxstr[1],10)] == 0){
 			marcado.style.backgroundColor = "white";					
-				abrirAlrededor(parseInt(auxstr[0],10),parseInt(auxstr[1],10),minas);
+				abrirAlrededor(parseInt(auxstr[0],10),parseInt(auxstr[1],8),minas);
 				}else{
-					if(minas[parseInt(auxstr[0],10)][parseInt(auxstr[1],10)] != "*"){
-						document.getElementById(myid).innerHTML = "<p>" + minas[parseInt(auxstr[0],10)][parseInt(auxstr[1],10)] + "</p>";
+					if(minas[parseInt(auxstr[0],10)][parseInt(auxstr[1],8)] != "*"){
+						document.getElementById(myid).innerHTML = "<p>" + minas[parseInt(auxstr[0],8)][parseInt(auxstr[1],8)] + "</p>";
 						marcado.style.backgroundColor = "white";
 					}else{
 						marcado.style.backgroundImage = "url(assets/img/minita.png)";						
