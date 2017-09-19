@@ -1,0 +1,46 @@
+#config{
+  max-width: 300px;
+  border:4px solid white;
+  border-radius: 8px;
+  color: white;
+  padding:50px;
+  margin-top: 5%;
+}
+
+#config p{
+  margin: 0;
+}
+
+.tablero{
+	width: 70%;
+	height: 70vh;								
+	margin-left: 3%;
+	margin-top: 5%;				
+			}
+
+.tablero div{
+	width: 10%;
+	height: 10%;
+	border: 1px solid black;
+	float: left;
+	background-color: white;			
+	font-size: 30;	
+	color: #1a5da0;
+	text-align: center;
+}
+			
+body{
+	background: url(../img/fondo.gif);
+	background-size: cover;
+	background-repeat:no-repeat;
+}
+			
+h1{
+	color: white;
+}
+			
+#mensaje{
+	text-align: center;
+	font-size: 3.0vw;
+	color: white
+}
