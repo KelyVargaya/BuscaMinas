@@ -25,15 +25,15 @@ var minas = inicio();
 
  function inicio(){
 	var tabla = [];
-	for(var i = 0; i < 8; i++){			        
-	    tabla[i] = [0,0,0,0,0,0,0,0];			        
+	for(var i = 0; i < 6; i++){			        
+	    tabla[i] = [0,0,0,0,0,0];			        
 	   }
 	 return tabla;
 	}		
 
 function crearTablero(){
-	for(var i = 0; i < 8; i++){
-		for(var j = 0; j < 8; j++){			           
+	for(var i = 0; i < 6; i++){
+		for(var j = 0; j < 6; j++){			           
 			  var div = document.createElement("div");
 			       div.id = i + "" + j;			            
 			         div.addEventListener("click",mostrarNumero, true);			            
@@ -48,11 +48,11 @@ function mostrarNumero(e){
 	var myid = auxstr[0] + auxstr[1];			
 		marcado = document.getElementById(myid);
 
-		if(minas[parseInt(auxstr[0],8)][parseInt(auxstr[1],8)] == 0){					
-				abrirAlrededor(parseInt(auxstr[0],8),parseInt(auxstr[1],8),minas);
+		if(minas[parseInt(auxstr[0],6)][parseInt(auxstr[1],6)] == 0){					
+				abrirAlrededor(parseInt(auxstr[0],6),parseInt(auxstr[1],6),minas);
 				}else{
-					if(minas[parseInt(auxstr[0],8)][parseInt(auxstr[1],8)] != "*"){
-						document.getElementById(myid).innerHTML = "<p>" + minas[parseInt(auxstr[0],8)][parseInt(auxstr[1],8)] + "</p>";
+					if(minas[parseInt(auxstr[0],6)][parseInt(auxstr[1],6)] != "*"){
+						document.getElementById(myid).innerHTML = "<p>" + minas[parseInt(auxstr[0],6)][parseInt(auxstr[1],6)] + "</p>";
 					}else{
 						marcado.style.backgroundImage = "url(assets/img/minita.png)";						
 						abrirTablero(minas);
@@ -62,8 +62,8 @@ function mostrarNumero(e){
 			}				
 
 function bombasAlrededor(tablero){
-		for(var i = 0; i < 8; i++){
-			 for(var j = 0; j < 8; j++){			           
+		for(var i = 0; i < 6; i++){
+			 for(var j = 0; j < 6; j++){			           
 			           if(tablero[i][j] == "*"){
 			           		if(i == 0 && j == 0){
 			           			colocaNumeroBombas(i, j, i + 1, j + 1,tablero);
@@ -96,7 +96,7 @@ function generarBombas(tablero){
 	fil = Math.floor((Math.random()*7)+0);
 	col = Math.floor((Math.random()*7)+0);
 
-		for(var i = 0; i < 8; i++){
+		for(var i = 0; i < 6; i++){
 			while (tablero[fil][col] == "*"){
 				fil = Math.floor((Math.random()*7)+0);
 					col = Math.floor((Math.random()*7)+0);
@@ -143,8 +143,8 @@ function abrirAlrededor(xi,xj,tablero){
 		} 
 
 function abrirTablero(tablero){
-	for(var i = 0; i < 8; i++){
-		  for(var j = 0; j < 8; j++){	
+	for(var i = 0; i < 6; i++){
+		  for(var j = 0; j < 6; j++){	
 			   var myid = i+""+j;
 			   var cajita =  document.getElementById(myid);		           
 			       if(tablero[i][j] == "*"){			        		
